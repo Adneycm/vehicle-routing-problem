@@ -10,7 +10,7 @@ using namespace std;
 
 #define MAX_CAPACITY 15
 #define MAX_CITY_VISITS 3
-#define filename "grafo_10.txt"
+#define filename "grafo.txt"
 
 
 bool contains(const std::vector<int>& vec, int value) {
@@ -81,7 +81,7 @@ void searchRoutes(
         int destination = edge.first;
         int weight = edge.second;
 
-        if (destination!=0 && (cities+1 >= MAX_CITY_VISITS || supply-demand[destination] <= 0)) {
+        if (destination!=0 && (cities+1 > MAX_CITY_VISITS || supply-demand[destination] <= 0)) {
           return;
         }
 
